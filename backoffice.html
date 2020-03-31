@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+  <meta charset="utf-8" />
+  <title>WebSocket Test</title>
+  <script language="javascript" type="text/javascript">
+var ws = new WebSocket("ws://localhost:3000");
+ws.onopen = function(evt) { console.log("Connection open ...")
+;};
+ws.onmessage = function(evt) { 
+console.log(evt)
+if(evt.data){
+  var a=JSON.parse(evt.data);
+  console.log(a.tab)
+}
+};
+ws.onclose = function(evt) { console.log("Connection closed."); };
+
+
+  </script>
+
+  <h2>WebSocket Test</h2>
+
+  <div id="output"></div>

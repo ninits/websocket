@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+  <meta charset="utf-8" />
+  <title>WebSocket Test</title>
+  <script language="javascript" type="text/javascript">
+    var websocket = new WebSocket("ws://localhost:3000");
+    var hash= 34;
+    websocket.onopen = function(evt) { console.log("Connection open ...")
+    websocket.send(JSON.stringify({'tab' : hash}));
+  }
+    </script>
+    
+  <h2>client Test</h2>
+
+  <div id="output5"></div>
